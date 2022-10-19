@@ -11,6 +11,7 @@ pipeline {
   stages {
     stage("Config") {
       steps {
+        sh 'npm config get registry'
         sh 'npm config rm proxy'
         sh 'npm config rm https-proxy'
         sh 'npm config set registry http://registry.npmjs.org/'
