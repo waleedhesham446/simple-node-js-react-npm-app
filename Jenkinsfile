@@ -9,6 +9,13 @@ pipeline {
     CI = 'true'
   }
   stages {
+    stage("Config") {
+      steps {
+        sh 'npm config rm proxy'
+        sh 'npm config rm https-proxy'
+        sh 'npm config set registry http://registry.npmjs.org/'
+      }
+    }
     stage("Build") {
       steps {
         sh 'npm install'
