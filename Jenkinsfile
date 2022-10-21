@@ -11,7 +11,7 @@ pipeline {
   stages {
     stage("Config") {
       steps {
-        sh 'pwd'
+        sh 'echo 123'
 //         sh 'npm config get registry'
 //         sh 'npm config rm proxy'
 //         sh 'npm config rm https-proxy'
